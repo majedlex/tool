@@ -60,3 +60,5 @@
 # 读取系统显示卡信息
 cards = `./amdmemtweak --current`
 read cards
+
+exit 0
