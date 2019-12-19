@@ -16,9 +16,10 @@ do
 	then
 		echo find Samsung Mem
                 bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56SAMSUNG
-		/home/work/tool/amdmemtweak --i $loop --REF 20000 --rcdrd 12
+		/home/work/tool/amdmemtweak --i $loop --REF 12000 --rcdrd 12
 	else
-		echo no finded
+		bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56SAMSUNG
+		/home/work/tool/amdmemtweak --i $loop --REF 12000 --rcdrd 12
 	fi
 }
 done
