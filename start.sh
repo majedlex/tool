@@ -5,14 +5,18 @@ Samsung="Samsung"
 for loop in 0 1 2 3 4 5 6 7 8 9
 do
 {
-	arr[$loop]=`./amdmemtweak --i $loop --c | grep Memory:`
-	if [[ $arr[$loop] =~ $Hynix ]]
+	arr[$loop]=`/home/work/tool/amdmemtweak --i $loop --c | grep Memory:`
+	echo ${arr[$loop]}
+	if [[ ${arr[$loop]} =~ $Hynix ]]
 	then
                 echo find Hynix Mem
-                #bash ./setPPT.sh $loop ./V56PPT
-	elif [[ $arr[$loop] =~ $Samsung ]]
+                bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56HYNIX
+		/home/work/tool/amdmemtweak --i $loop --cl 18 --ras 23 --rcdrd 19 --rcdwr 11 --rc 34 --rp 13 --rrds 3 --rrdl 4 --rtp 6 --faw 12 --cwl 7 --wtrs 4 --wtrl 4 --wr 11  --rfc 164 --REF 17000
+	elif [[ ${arr[$loop]} =~ $Samsung ]]
+	then
 		echo find Samsung Mem
-                #bash ./setPPT.sh $loop ./V56PPT
+                bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56SAMSUNG
+		/home/work/tool/amdmemtweak --i $loop --REF 20000 --rcdrd 12
 	else
 		echo no finded
 	fi
