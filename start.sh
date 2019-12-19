@@ -58,7 +58,7 @@
 # echo "-----函数执行完毕-----"
 
 # 读取系统显示卡信息
-cards = `./amdmemtweak --current`
+cards = `/home/work/tool/amdmemtweak --current`
 read cards
 
 exit 0
