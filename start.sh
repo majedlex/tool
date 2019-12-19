@@ -1,4 +1,25 @@
 #!/bin/bash
+
+Hynix="Hynix"
+Samsung="Samsung"
+for loop in 0 1 2 3 4 5 6 7 8 9
+do
+{
+	arr[$loop]=`./amdmemtweak --i $loop --c | grep Memory:`
+	if [[ $arr[$loop] =~ $Hynix ]]
+	then
+                echo find Hynix Mem
+                #bash ./setPPT.sh $loop ./V56PPT
+	elif [[ $arr[$loop] =~ $Samsung ]]
+		echo find Samsung Mem
+                #bash ./setPPT.sh $loop ./V56PPT
+	else
+		echo no finded
+	fi
+}
+done
+
+
 #环境变量
 # echo $PATH
 #自定义变量hello
@@ -58,7 +79,5 @@
 # echo "-----函数执行完毕-----"
 
 # 读取系统显示卡信息
-cards = `/home/work/tool/amdmemtweak --current`
-read cards
 
 exit 0
