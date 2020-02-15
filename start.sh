@@ -12,7 +12,7 @@ do
 	then
         echo find Hynix Mem
         bash /home/work/tool/setPPT.sh $loop /home/work/tool/TEST
-		/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 148 --RRDS 3 --RRDL 4 --rp 13 --rc 35 --rcdwr 4 --rcdrd 19
+		/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 148 --RRDS 3 --RRDL 4 --rp 13 --rc 35 --rcdwr 4 --rcdrd 17 --ras 30
 	elif [[ ${arr[$loop]} =~ $Samsung ]]
 	then
 		echo find Samsung Mem
