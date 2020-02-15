@@ -12,8 +12,8 @@ do
 	then
         echo find Hynix Mem
         bash /home/work/tool/setPPT.sh $loop /home/work/tool/TEST
-		/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 156
-		# 必须满足：RC = RAS + RP 
+		/home/work/tool/amdmemtweak --i $loop --cl 18 --ras 23 --rcdrd 23 --rcdwr 11 --rc 34 --rp 13 --rrds 3 --rrdl 4 --rtp 6 --faw 12 --cwl 7 --wtrs 4 --wtrl 4 --wr 11  --rfc 164 --REF 17000
+		# RC = RAS + RP 
 		# RAS = MAX(RCDRD,RCDWR) + WR
 		#/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 148 --RRDS 4 --RRDL 5 --rp 13 --rc 35 --rcdwr 4 --rcdrd 19 --ras 24
 	elif [[ ${arr[$loop]} =~ $Samsung ]]
