@@ -12,7 +12,7 @@ do
 	then
         echo find Hynix Mem
         bash /home/work/tool/setPPT.sh $loop /home/work/tool/TEST
-		/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 148
+		/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 156
 		# 必须满足：RC = RAS + RP 
 		# RAS = MAX(RCDRD,RCDWR) + WR
 		#/home/work/tool/amdmemtweak --i $loop --REF 15600 --rfc 148 --RRDS 4 --RRDL 5 --rp 13 --rc 35 --rcdwr 4 --rcdrd 19 --ras 24
