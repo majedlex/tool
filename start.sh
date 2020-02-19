@@ -11,15 +11,15 @@ do
 	if [[ ${arr[$loop]} =~ $Hynix ]]
 	then
         echo find Hynix Mem
-        bash /home/work/tool/setPPT.sh $loop /home/work/tool/TEST03
-		/home/work/tool/amdmemtweak --i $loop --cl 18 --rcdrd 17 --rcdwr 3 --REF 17000 --rfc 156 --rc 35 --rp 15
+        bash /home/work/tool/setPPT.sh $loop /home/work/tool/910830
+		/home/work/tool/amdmemtweak --i $loop --REF 17000
 	elif [[ ${arr[$loop]} =~ $Samsung ]]
 	then
 		echo find Samsung Mem
-        bash /home/work/tool/setPPT.sh $loop /home/work/tool/TEST03
+        bash /home/work/tool/setPPT.sh $loop /home/work/tool/910830
 		/home/work/tool/amdmemtweak --i $loop --RCDRD 12 --REF 12000
 	else
-		bash /home/work/tool/setPPT.sh $loop /home/work/tool/TEST03
+		bash /home/work/tool/setPPT.sh $loop /home/work/tool/910830
 		/home/work/tool/amdmemtweak --i $loop --REF 15600
 	fi
 }
