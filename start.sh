@@ -16,7 +16,7 @@ do
 	elif [[ ${arr[$loop]} =~ $Samsung ]]
 	then
 		echo find Samsung Mem
-        bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56PPT965915800
+        bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56PPT965925800
 		/home/work/tool/amdmemtweak --i $loop --REF 12000 --rcdrd 12
 	else
 		bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56PPT965915800
