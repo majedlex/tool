@@ -12,7 +12,7 @@ do
 	then
         echo find Hynix Mem
         bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56PPT965915800
-		/home/work/tool/amdmemtweak --i $loop --REF 17000 --RCDRD 20 
+		/home/work/tool/amdmemtweak --i $loop --REF 17000 --RCDRD 21 --rc 38 --rp 14 --ras 24 --rfc 164
 	elif [[ ${arr[$loop]} =~ $Samsung ]]
 	then
 		echo find Samsung Mem
@@ -20,7 +20,7 @@ do
 		/home/work/tool/amdmemtweak --i $loop --REF 12000 --RCDRD 12
 	else
 		bash /home/work/tool/setPPT.sh $loop /home/work/tool/V56PPT965915800
-		/home/work/tool/amdmemtweak --i $loop --REF 15600 
+		/home/work/tool/amdmemtweak --i $loop --REF 15600
 	fi
 }
 done
